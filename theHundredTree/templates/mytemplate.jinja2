@@ -1,0 +1,44 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+
+<div style="margin: 0px 10px 40px 10px; display: block; font-style: italic">
+Write a program that outputs all possibilities to put + or - or nothing between the numbers 1, 2, ..., 9 (in this order) such that the result is always 100. For example: 1 + 2 + 34 – 5 + 67 – 8 + 9 = 100.
+</div>
+
+<form method="POST" action="tree">
+
+<div class="font-normal">
+From <input type="text" name="min" size="2" value="1" \> to <input type="text" name="max" size="2" value="9" \> resulting in <input type="text" name="sum" size="2" value="100" \> <br/><br/>
+<input type="submit" value="Generate series">
+</div>
+
+</form>
+
+{% if errors %}
+
+<span>Oops, we might have found some errors, see below</span>
+
+<ul>
+{% for exp in errors %}
+<li> {{exp}}
+{% endfor %}
+</ul>
+
+{% endif %}
+
+{% if list %}
+
+<span>Expressions that result in {{sum}}</span>
+
+<ul>
+{% for exp in list %}
+<li> {{exp}}
+{% endfor %}
+</ul>
+
+{% endif %}
+
+<span class="footer" style="font: italic 8px arial, sans-serif; color: rgb(170,170,170); margin-top: 100px ">Edmilson Frank</span>
+
+{% endblock content %}

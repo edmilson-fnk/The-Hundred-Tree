@@ -1,0 +1,3 @@
+[run]
+source = theHundredTree
+omit = theHundredTree/test*
