@@ -6,8 +6,6 @@ Write a program that outputs all possibilities to put + or - or nothing between 
 
 Run it with Python using the Pyramid Framework. The app package does all the logic job.
 
-Try it: http://edmilsonfrank.dyndns-ip.com:6543
-
 To run the application, just download it and run the pserve script to the development.ini file. The application was originally made with Windows, so be sure to run the appropriate pserve.
 
 # The solution
