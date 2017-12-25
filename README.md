@@ -15,3 +15,33 @@ The problem is straight and simple, a brute force solution will quickly solve it
 The methodology adopted for the brute force was: create a Binary Tree with the numbers in [min, max] interval in the leafs, while the internal nodes would be filled with all the different operators. An in-order visit of the full tree will get the expression, so an eval() function can get its result and compare to the expected output. Naming the project was motivated by the binary tree.
 
 A simple model for the problem was created: the Node class in a node.py file, with the minimum required aspects of a tree to work, and a builder.py file, responsible for validating the parameters submitted and building a template tree. The Node module build all the possibilities itself, but it's something that could be easily extracted in the future, if needed.
+
+# Running it
+
+- Clone the project
+
+    git clone https://github.com/edmilson-fnk/The-Hundred-Tree.git
+
+- Change directory into your newly created project.
+
+    cd theHundredTree
+
+- Create a Python virtual environment.
+
+    python3 -m venv env
+
+- Upgrade packaging tools.
+
+    env/bin/pip install --upgrade pip setuptools
+
+- Install the project in editable mode with its testing requirements.
+
+    env/bin/pip install -e ".[testing]"
+
+- Run your project's tests.
+
+    env/bin/pytest
+
+- Run your project.
+
+    env/bin/pserve development.ini
